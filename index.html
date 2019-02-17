@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal No.4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- LOAD YOUR CSS HERE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div>
+        <!-- PUT YOUR SELECTOR -->
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="up">Up</button>
+        <button id="left">Left</button>
+        <button id="right">Right</button>
+    </div>
+    
+    </div>
+    <div class="bean">
+        <!-- LOAD boo.png here -->
+        <img src="img/boo.png" width="50%" height="50%"/>
+        <!-- End Of Load boo.png -->
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        // Put Your JQuery Function here
+        var myElement = $(".bean");
+        myElement.hide();
+
+        $("#show").click(function(){
+            $(".bean").show();
+        });
+
+        $("#hide").click(function(){
+            $(".bean").hide();
+        });
+
+        $("#up").click(function(){
+            $(".bean").css({"transform": "rotateX(180deg)"});
+        });
+
+        $("#left").click(function(){
+            $(".bean").css({"transform": "rotateX(360deg)"});
+        });
+
+        $("#right").click(function(){
+            $(".bean").css({"transform": "scaleX(-1)"});
+        });
+    })
+</script>
+</body>
+</html>
